@@ -1,0 +1,75 @@
+  /* Create an accessible color palette using var()function */
+  /* https://www.w3schools.com/css/css3_variables.asp */
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+ 
+  :root{
+    --green: #00BF7D;
+    --black: #000000; 
+  }
+  
+  body{
+    font-family: Caveat;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    width:70%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--black);
+    background: var(--green);
+  }
+
+  .radio {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* background: #575294; */
+    color: var(--black);
+  }
+
+  #name {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background: var(--green);
+    color: var(--black);
+  }
+
+  #message {
+    width: 100%;
+    padding: 10px;
+    resize: vertical;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid #5928ed;
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #5928ed;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: var(--green);
+  }
+  .skip{
+    position: absolute;
+    left: -1000px;
+  }
+  .skip:focus{
+    left: 10px;
+  }
